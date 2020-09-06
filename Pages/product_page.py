@@ -14,7 +14,6 @@ class ProductPage(BasePage):
    # print("Productpage:" + str(index))
     self.click(ProductLocators.ADD_TO_CART_BUTTON(index))
 
-
   def click_bag_icon(self):
       logging.info("ADD a cart")
       self.click(ProductLocators.ADD_TO_CART_BUTTON)
