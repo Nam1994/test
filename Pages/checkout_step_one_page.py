@@ -2,6 +2,7 @@ from Pages.base_page_object import BasePage
 from Locators.locators import CheckoutStepOneLocators
 from TestData.TestData import TestData
 import logging
+
 class CheckoutStepOne(BasePage):
     def __init__(self, driver):
         super().__init__(driver)

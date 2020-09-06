@@ -1,11 +1,8 @@
 import os
 import sys
 import unittest
-from idlelib import browser
-
 from selenium import webdriver
 from TestData.TestData import TestData
-import  time
 sys.path.append(".")
 
 #Base Class for the tests
@@ -25,7 +22,6 @@ class BaseTest(unittest.TestCase):
             self.driver.quit()
         except Exception as e:
             pass
-
 
     def startBrowser(name = "chrome"):
         """

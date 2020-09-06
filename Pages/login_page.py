@@ -8,7 +8,6 @@ class LoginPage(BasePage):
   def __init__(self, driver):
     super().__init__(driver)
     self.navigate_to(TestData.BASE_URL)
-    #logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
   def login(self, username, password):
     self.enter_username(username)

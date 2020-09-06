@@ -1,8 +1,5 @@
-from email import message
-
 from Pages.base_page_object import BasePage
 from Locators.locators import ProductLocators
-from TestData.TestData import TestData
 import logging
 
 class ProductPage(BasePage):

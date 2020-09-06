@@ -24,7 +24,6 @@ class HerokuAppLogin3(BaseTest):
 
     def test_login_successfully(self):
         login_page = LoginPage(self.driver)
-        # self.assertTrue(login_page.is_title_matches())
         login_page.login(TestData.USERNAME, TestData.PASSWORD)
         product_page = ProductPage(self.driver)
         product_page.add_product_to_cart(1)

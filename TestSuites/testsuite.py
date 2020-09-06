@@ -1,10 +1,10 @@
 import sys
 sys.path.append(".")
 import unittest
-from TestCases.test_login_01 import HerokuAppLogin1
-from TestCases.test_login_02 import HerokuAppLogin2
-from TestCases.test_login_03 import HerokuAppLogin3
-from TestCases.test_login_04 import HerokuAppLogin4
+from TestCases.test_case_01 import HerokuAppLogin1
+from TestCases.test_case_02 import HerokuAppLogin2
+from TestCases.test_case_03 import HerokuAppLogin3
+from TestCases.test_case_04 import HerokuAppLogin4
 
 # get all tests from Login class
 login1 = unittest.TestLoader().loadTestsFromTestCase(HerokuAppLogin1)
