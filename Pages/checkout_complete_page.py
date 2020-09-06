@@ -8,4 +8,3 @@ class CartPage(BasePage):
   def __init__(self, driver):
     super().__init__(driver)
     pass
-    self.navigate_to(TestData.BASE_URL)
