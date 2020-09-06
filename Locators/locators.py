@@ -6,39 +6,39 @@ class LoginPageLocators(object):
     INPUT_PASSWORD = (By.ID, 'password')
     BUTTON_LOGIN = (By.XPATH, "//*[@id='login-button']")
 
-class ResultPageLocators(object):
-    """A class for main page locators. All main page locators should come here"""
-    LABEL_MESSAGE = (By.ID, 'flash')
-
-class SauDemo(object):
-
-    CHECK_OUT = (By.XPATH, "//*[@class='btn_action checkout_button']")
-    INPUT_FIRSTNAME = (By.ID, 'first-name')
-    INPUT_LASTNAME = (By.ID, 'last-name')
-    INPUT_ZIPCODE = (By.ID, 'postal-code')
-    CONTINUTE_BUTTON = (By.XPATH, "//*[@class='btn_primary cart_button']")
-    FINISH_BUTTON = (By.XPATH, "//*[@class='btn_action cart_button']")
-    CANCEL_BUTTON = (By.XPATH, "//*[@id='checkout_info_container']/div/form/div[2]/a")
-    CONTINUTE_BUTTON_SHOPPING = (By.XPATH, "//*[@class='btn_secondary']")
-    CLICK_BAG = (By.XPATH, "//*[@class='shopping_cart_container']")
-
+class ProductLocators(object):
     def ADD_TO_CART_BUTTON(index):
         x = "//div[@class='inventory_list']/div[@class='inventory_item']["
-        z = "]//button"
+        z = "]//button[text()='ADD TO CART']"
        #print("abc" + str(index))
         #print(x + str(index) + z)
         return (By.XPATH, (x + str(index) + z))
 
     def REMOVE_TO_CART_BUTTON(index):
         x = "//div[@class='inventory_list']/div[@class='inventory_item']["
-        z = "]//button"
-       #print("abc" + str(index))
-        #print(x + str(index) + z)
+        z = "]//button[text()='REMOVE']"
         return (By.XPATH, (x + str(index) + z))
 
-    def REMOVE_TO_CART_IN_BAG(index):
-        x = "//div[@class='cart_list']/div[@class='cart_item']["
-        z = "]//button"
-       #print("abc" + str(index))
-        #print(x + str(index) + z)
+class CartLocators(object):
+    CHECK_OUT = (By.XPATH, "//*[@class='btn_action checkout_button']")
+    CONTINUTE_BUTTON = (By.XPATH, "//*[@class='btn_primary cart_button']")
+    CLICK_BAG = (By.XPATH, "//*[@class='shopping_cart_container']")
+
+class CheckoutStepOneLocators(object):
+    INPUT_FIRSTNAME = (By.ID, 'first-name')
+    INPUT_LASTNAME = (By.ID, 'last-name')
+    INPUT_ZIPCODE = (By.ID, 'postal-code')
+    CANCEL_BUTTON = (By.XPATH, "//div[@class='checkout_buttons']/a[text()='CANCEL']")
+    CONTINUTE_BUTTON_SHOPPING = (By.XPATH, "//*[@class='btn_secondary']")
+
+    def REMOVE_TO_CART_BUTTON(index):
+        x = "//div[@class='cart_list']//div[@class='cart_item']["
+        z = "]//button[text()='REMOVE']"
         return (By.XPATH, (x + str(index) + z))
+
+class CheckoutStepTwoLocators(object):
+    CANCEL_BUTTON = (By.XPATH, "//div[@class='cart_footer']/a[text()='CANCEL']")
+    FINISH_BUTTON = (By.XPATH, "//*[@class='btn_action cart_button']")
+
+class CheckoutComplete(object):
+    pass
