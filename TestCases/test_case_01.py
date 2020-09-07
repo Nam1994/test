@@ -19,7 +19,6 @@ class HerokuAppLogin1(BaseTest):
     def test_login_successfully(self):
         login_page = LoginPage(self.driver)
         login_page.login(TestData.USERNAME, TestData.PASSWORD)
-        login_page.click_login_button()
 
 if __name__ == "__main__":
     unittest.main()

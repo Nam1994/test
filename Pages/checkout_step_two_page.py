@@ -6,7 +6,6 @@ import logging
 class CheckoutStepTwo(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
-        self.navigate_to(TestData.BASE_URL)
 
     def click_finish_button(self):
         logging.info("finish button")

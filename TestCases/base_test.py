@@ -14,6 +14,7 @@ class BaseTest(unittest.TestCase):
         #browser = self.get_browser()
         self.driver = self.startBrowser(browser)
         self.driver.maximize_window()
+
     @classmethod
     def tearDown(self):
         # To do the cleanup after test has executed.

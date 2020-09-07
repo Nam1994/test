@@ -11,7 +11,6 @@ class BasePage(object):
     def __init__(self, driver):
         self.driver = driver
         self.timeout = 300000
-        #logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
     def navigate_to(self, url):
         self.driver.get(url)
@@ -21,8 +20,9 @@ class BasePage(object):
 
     # this function performs click on web element whose locator is passed to it.
     def click(self, by_locator):
-        message = "Click on the element with locator '{}'"
-        logging.info(message.format(','.join(by_locator)))
+
+        #message = "Click on the element with locator '{}'"
+        #logging.info(message.format(','.join(by_locator)))
 
         WebDriverWait(self.driver, self.timeout).until(EC.visibility_of_element_located(by_locator)).click()
 

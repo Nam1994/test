@@ -13,7 +13,7 @@ class ProductPage(BasePage):
 
   def click_bag_icon(self):
       logging.info("ADD a cart")
-      self.click(ProductLocators.ADD_TO_CART_BUTTON)
+      self.click(ProductLocators.CLICK_BAG)
 
   def remove_add_to_cart(self, index):
    # print("Productpage:" + str(index))

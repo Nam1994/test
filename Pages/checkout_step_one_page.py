@@ -6,7 +6,6 @@ import logging
 class CheckoutStepOne(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
-        self.navigate_to(TestData.BASE_URL)
 
     def addcode(self, firstname, lastname, zipcode):
         self.enter_firstname(firstname)

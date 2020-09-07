@@ -7,6 +7,8 @@ class LoginPageLocators(object):
     BUTTON_LOGIN = (By.XPATH, "//*[@id='login-button']")
 
 class ProductLocators(object):
+    CLICK_BAG = (By.XPATH, "//*[@class='shopping_cart_container']")
+
     def ADD_TO_CART_BUTTON(index):
         x = "//div[@class='inventory_list']/div[@class='inventory_item']["
         z = "]//button[text()='ADD TO CART']"
@@ -22,7 +24,7 @@ class ProductLocators(object):
 class CartLocators(object):
     CHECK_OUT = (By.XPATH, "//*[@class='btn_action checkout_button']")
     CONTINUTE_BUTTON_SHOPPING = (By.XPATH, "//*[@class='btn_secondary']")
-    CLICK_BAG = (By.XPATH, "//*[@class='shopping_cart_container']")
+
     def REMOVE_TO_CART_BUTTON(index):
         x = "//div[@class='cart_list']//div[@class='cart_item']["
         z = "]//button[text()='REMOVE']"

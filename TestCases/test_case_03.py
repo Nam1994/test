@@ -6,7 +6,6 @@ from Pages.login_page import LoginPage
 from Pages.product_page import ProductPage
 from Pages.cart_page import CartPage
 from Pages.checkout_step_one_page import CheckoutStepOne
-from Pages.checkout_step_two_page import CheckoutStepTwo
 from TestCases.base_test import BaseTest
 from TestData.TestData import TestData
 import time
@@ -20,7 +19,8 @@ class HerokuAppLogin3(BaseTest):
 
     @classmethod
     def tearDown(self):
-         super().tearDown()
+        super().tearDown()
+        pass
 
     def test_login_successfully(self):
         login_page = LoginPage(self.driver)
@@ -36,7 +36,6 @@ class HerokuAppLogin3(BaseTest):
         time.sleep(2)
         cart_page.click_checkout()
         checkout_step_one_page = CheckoutStepOne(self.driver)
-        checkout_step_one_page.addcode(TestData.FIRSTNAME, TestData.LASTNAME, TestData.ZIPCODE)
         checkout_step_one_page.click_continute()
         checkout_step_one_page.click_cancel_button()
         time.sleep(3)
